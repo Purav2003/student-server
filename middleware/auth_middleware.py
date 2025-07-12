@@ -9,6 +9,7 @@ EXEMPT_PATHS = [
     re.compile(r"^/api/auth/signup$"),
     re.compile(r"^/docs"),         
     re.compile(r"^/openapi.json"),
+    re.compile(r"^/health"),
 ]
 
 class CustomMiddleware(BaseHTTPMiddleware):

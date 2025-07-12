@@ -61,7 +61,7 @@ server/
 
 ```bash
 git clone https://github.com/Purav2003/student-server
-cd student-backend
+cd student-server
 ```
 
 ### 2. Create & activate virtual environment
