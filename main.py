@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from config.database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
-from controller import user_controller
+from controller import user_controller, student_controller
 from middleware.auth_middleware import CustomMiddleware
 # Initialize the database
 Base.metadata.create_all(bind=engine)
@@ -38,6 +38,8 @@ app.add_middleware(CustomMiddleware)
 
 # Register routers
 app.include_router(user_controller.user_router, prefix="/api/auth", tags=["user"])
+app.include_router(student_controller.student_router, prefix="/api/students", tags=["students"])
+
 
 
 
