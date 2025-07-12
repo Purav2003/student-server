@@ -73,7 +73,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=YOUR_TOKEN_EXPIRE_MINUTES
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/student-backend.git
+git clone https://github.com/Purav2003/student-server.git
 cd student-backend
 ```
 
