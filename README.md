@@ -55,25 +55,12 @@ server/
 
 ---
 
-## 🔐 Environment Configuration
-
-Create a `.env` file in the root:
-
-```env
-DATABASE_URI=POSTGRESQL_URL
-SECRET_KEY=YOUR_SECRET_KEY
-ALGORITHM=YOUR_ALGORITHM
-ACCESS_TOKEN_EXPIRE_MINUTES=YOUR_TOKEN_EXPIRE_MINUTES
-```
-
----
-
 ## ⚙️ Setup & Run
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Purav2003/student-server.git
+git clone https://github.com/Purav2003/student-server
 cd student-backend
 ```
 
@@ -90,13 +77,22 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Run database migrations
+### 4. Create a `.env` file in the root:
+
+```env
+DATABASE_URI=POSTGRESQL_URL
+SECRET_KEY=YOUR_SECRET_KEY
+ALGORITHM=YOUR_ALGORITHM
+ACCESS_TOKEN_EXPIRE_MINUTES=YOUR_TOKEN_EXPIRE_MINUTES
+```
+
+### 5. Run database migrations
 
 ```bash
 alembic upgrade head
 ```
 
-### 5. Start the FastAPI server
+### 6. Start the FastAPI server
 
 ```bash
 uvicorn main:app --reload
