@@ -80,6 +80,8 @@ def get_results(db: Session, searchTerm: str = None):
             "score": result.score,
         })
 
+    if not result_list:
+        raise HTTPException(status_code=404, detail="No results found")
     return result_list
 
 def remove_result(db: Session, result_id: str):
