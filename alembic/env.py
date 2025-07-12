@@ -4,7 +4,9 @@ from alembic import context
 from dotenv import load_dotenv
 # Interpret the target_metadata here.
 from config.database import Base  # Update with your actual models location
-from models.user_model import Users  
+from models.user_model import Users 
+from models.student_model import Student
+from models.course_model import Course
 
 # Update with your actual models location
 target_metadata = Base.metadata
