@@ -60,10 +60,10 @@ server/
 Create a `.env` file in the root:
 
 ```env
-DATABASE_URI='postgresql://neondb_owner:npg_8aDmV1PiArhM@ep-broad-moon-adz9c9bh-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require'
-SECRET_KEY='SRMS'
-ALGORITHM='HS256'
-ACCESS_TOKEN_EXPIRE_MINUTES=43200
+DATABASE_URI=POSTGRESQL_URL
+SECRET_KEY=YOUR_SECRET_KEY
+ALGORITHM=YOUR_ALGORITHM
+ACCESS_TOKEN_EXPIRE_MINUTES=YOUR_TOKEN_EXPIRE_MINUTES
 ```
 
 ---
