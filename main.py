@@ -28,10 +28,9 @@ logger.add(
 )
 
 
-@app.get("/api")
-def read_root():
-    logger.info("Welcome to the API")
-    return {"message": "Welcome to the API"}
+@app.get("/health")
+async def health_check():
+    return {"status": "ok", "message": "Server is running"}
 
 app.add_middleware(CustomMiddleware)
 
