@@ -52,7 +52,8 @@ def get_students(db: Session, searchTerm: str = None):
         query = query.filter(
             (Student.first_name.ilike(f"%{searchTerm}%")) |
             (Student.family_name.ilike(f"%{searchTerm}%")) |
-            (Student.email.ilike(f"%{searchTerm}%"))
+            (Student.email.ilike(f"%{searchTerm}%")) |
+            (Student.first_name + ' ' + Student.family_name).ilike(searchTerm)
         )
     students = query.all()
     if not students:
