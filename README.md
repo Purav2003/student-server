@@ -1,4 +1,4 @@
-# 🚀 Student Result Management System (SRMS) 	
+# 🚀 Student Result Management System (SRMS) - Backend
 
 A robust and modular **FastAPI** backend for managing students, courses, and results — built for speed, security, and scalability.
 
@@ -86,13 +86,7 @@ ALGORITHM=YOUR_ALGORITHM
 ACCESS_TOKEN_EXPIRE_MINUTES=YOUR_TOKEN_EXPIRE_MINUTES
 ```
 
-### 5. Run database migrations
-
-```bash
-alembic upgrade head
-```
-
-### 6. Start the FastAPI server
+### 5. Start the FastAPI server
 
 ```bash
 uvicorn main:app --reload
